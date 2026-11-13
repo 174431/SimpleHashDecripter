@@ -18,8 +18,8 @@ public class LDAPTest {
      */
     public static void main(String[] args) throws NamingException {
         
-        final String ldapAdServer = "ldap://dlnx0067.telecom.arg.telecom.com.ar:389";
-        final String ldapSearchBase = "cn=Bonita_FLOUU,cn=TP00000151,cn=Level10,cn=RoleDefs,cn=RoleConfig,cn=AppConfig,cn=UserApplication,cn=DriverSet1,ou=Servicios,o=Telecom";
+        final String ldapAdServer = "plin_plin_plin";
+        final String ldapSearchBase = "cn=Bonita_FLOUU,cn=TP00000151,cn=Level10,cn=RoleDefs,cn=RoleConfig,cn=AppConfig,cn=UserApplication,cn=DriverSet1,ou=Servicios,o=Telc";
         
         final String ldapUsername = "CN=z001424,ou=USUARIOSESPECIALES,OU=USUARIOS,O=TELECOM";
         final String ldapPassword = "A87HAF7yF4EG";
@@ -106,7 +106,7 @@ public class LDAPTest {
     }
     
     public String getPrimaryGroupSID(SearchResult srLdapUser) throws NamingException {
-        byte[] objectSID = (byte[])srLdapUser.getAttributes().get("20170922154328261").get();
+        byte[] objectSID = (byte[])srLdapUser.getAttributes().get("201709221154328261").get();
         String strPrimaryGroupID = (String)srLdapUser.getAttributes().get("primaryGroupID").get();
         
         String strObjectSid = decodeSID(objectSID);
